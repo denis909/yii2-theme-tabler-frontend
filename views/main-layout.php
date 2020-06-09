@@ -1,7 +1,8 @@
 <?php
 
 use frontend\theme\Assets;
-use frontend\theme\Cart;
+use frontend\theme\ShoppingCart;
+use frontend\theme\ShoppingCartItem;
 use frontend\theme\Card;
 use frontend\theme\UserMenu;
 use frontend\theme\AccountMenu;
@@ -9,10 +10,10 @@ use frontend\theme\MainMenu;
 use frontend\theme\FooterMenu;
 use frontend\theme\Layout;
 
-Assets::register($this);
+$assets = Assets::register($this);
 
 ?>
-<?php Layout::begin();?>
+<?php $layout = Layout::begin($layoutOptions);?>
 <div class="page">
   <div class="flex-fill">
     <div class="header py-4">
@@ -29,7 +30,9 @@ Assets::register($this);
             </div>
             */
             ?>
-            <?= Cart::widget(array_merge($cartOptions, ['items' => $cart]));?>
+
+            <?= frontend\theme\ShoppingCart::widget($shoppingCart);?>
+
             <div class="dropdown">
               <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                 <span class="avatar" style="background-image: url(<?= $assets->baseUrl;?>/demo/faces/female/25.jpg)"></span>
@@ -100,4 +103,4 @@ Assets::register($this);
     </div>
   </footer>
 </div>
-<?php Layout::end();?>
+<?php $layout::end();?>

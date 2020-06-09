@@ -2,12 +2,12 @@
 
 namespace denis909\themes\tabler;
 
-class MainLayout extends \yii\base\Widget
+use yii\helper\ArrayHelper;
+
+class MainLayout extends \denis909\theme\MainLayout
 {
 
     public $content;
-
-    public $theme;
 
     public $breadcrumbs = [];
 
@@ -27,14 +27,35 @@ class MainLayout extends \yii\base\Widget
 
     public $accountMenu = [];
 
-    public $cart = [];
+    public $shoppingCartItems = [];
 
-    public $cartOptions = [];
+    public $defaultShoppingCartOptions = [
+        'class' => ShoppingCart::class,
+        'menuClass' => ShoppingCartMenu::class
+    ];
+
+    public $shoppingCartOptions = [];
+
+    public $defaultShoppingCartItemOptions = ['class' => ShippingCartItem::class];
+
+    public $shoppingCartItemOptions = [];
+
+    public $defaultLayoutOptions = ['assetsClass' => Assets::class];
+
+    public $layoutOptions = [];
 
     public function run()
     {
+        $shoppingCartItems = $this->shoppingCartItems;
+
+        foreach($shoppingCartItems as $key => $item)
+        {
+            $shoppingCartItems[$key] = array_merge($this->defaultShoppingCartItemOptions, $this->shoppingCartItemOptions, $item);
+        }
+
+        $shoppingCartOptions = array_merge($this->defaultShoppingCartOptions, $this->shoppingCartOptions);
+
         return $this->render('main-layout', [
-            'theme' => $this->theme,
             'content' => $this->content,
             'breadcrumbs' => $this->breadcrumbs,
             'actionMenu' => $this->actionMenu,
@@ -44,9 +65,9 @@ class MainLayout extends \yii\base\Widget
             'footerMenu' => $this->footerMenu,
             'userMenu' => $this->userMenu,
             'accountMenu' => $this->accountMenu,
-            'cart' => $this->cart,
-            'cartOptions' => $this->cartOptions,
-            'copyright' => str_replace('{year}', date('Y'), $this->copyright)
+            'shoppingCart' => array_merge($shoppingCartOptions, ['items' => $shoppingCartItems]),
+            'copyright' => str_replace('{year}', date('Y'), $this->copyright),
+            'layoutOptions' => array_merge($this->defaultLayoutOptions, $this->layoutOptions)
         ]);
     }
 
