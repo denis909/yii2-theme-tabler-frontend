@@ -1,6 +1,7 @@
 <?php
 
 Yii::$container->setDefinitions([
+    'frontend\theme\FrontendLayout' => 'denis909\themes\tabler\FrontendLayout',
     'frontend\theme\AccountMenu' => 'denis909\themes\tabler\AccountMenu',
     'frontend\theme\Assets' => 'denis909\themes\tabler\Assets',
     'frontend\theme\Card' => 'denis909\themes\tabler\Card',
@@ -12,7 +13,6 @@ Yii::$container->setDefinitions([
     'frontend\theme\FooterMenu' => 'denis909\themes\tabler\FooterMenu',
     'frontend\theme\GridView' => 'denis909\themes\tabler\GridView',
     'frontend\theme\Layout' => 'denis909\themes\tabler\Layout',
-    'frontend\theme\MainLayout' => 'denis909\themes\tabler\MainLayout',
     'frontend\theme\MainMenu' => 'denis909\themes\tabler\MainMenu',
     'frontend\theme\UserMenu' => 'denis909\themes\tabler\UserMenu'
 ]);
