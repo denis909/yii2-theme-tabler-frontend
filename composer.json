@@ -1,13 +1,7 @@
 {
     "name": "denis909/yii2-theme-tabler-frontend",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "denis909\\themes\\tabler\\" : ""
-        }
-    },
     "require": {
-        "denis909/yii2-frontend-theme": "*",
         "denis909/yii2-theme-tabler": "*"
     }
 }
