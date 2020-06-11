@@ -16,7 +16,3 @@ Yii::$container->setDefinitions([
     'frontend\theme\MainMenu' => 'denis909\themes\tabler\MainMenu',
     'frontend\theme\UserMenu' => 'denis909\themes\tabler\UserMenu'
 ]);
-
-//use Denis909\CascadeFilesystem\CascadeConfig;
-
-//CascadeConfig::addPath(__DIR__);

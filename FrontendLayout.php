@@ -4,7 +4,7 @@ namespace denis909\themes\tabler;
 
 use yii\helper\ArrayHelper;
 
-class MainLayout extends \denis909\theme\MainLayout
+class FrontendLayout extends \denis909\theme\MainLayout
 {
 
     public $content;
@@ -55,7 +55,7 @@ class MainLayout extends \denis909\theme\MainLayout
 
         $shoppingCartOptions = array_merge($this->defaultShoppingCartOptions, $this->shoppingCartOptions);
 
-        return $this->render('main-layout', [
+        return $this->render('frontend-layout', [
             'content' => $this->content,
             'breadcrumbs' => $this->breadcrumbs,
             'actionMenu' => $this->actionMenu,
