@@ -2,6 +2,7 @@
 
 Yii::$container->setDefinitions([
     'frontend\theme\AccountMenu' => 'denis909\themes\tabler\AccountMenu',
+    'frontend\theme\ActiveForm' => 'denis909\themes\tabler\ActiveForm',
     'frontend\theme\Assets' => 'denis909\themes\tabler\Assets',
     'frontend\theme\Card' => 'denis909\themes\tabler\Card',
     'frontend\theme\CardMenu' => 'denis909\themes\tabler\CardMenu',
