@@ -2,6 +2,7 @@
     "name": "denis909/yii2-theme-tabler-frontend",
     "license": "MIT",
     "require": {
+        "denis909/yii2-frontend-theme": "*",
         "denis909/yii2-theme-tabler": "*"
     }
 }
