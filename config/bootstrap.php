@@ -10,6 +10,7 @@ Yii::$container->setDefinitions([
     'frontend\theme\FooterMenu' => 'denis909\themes\tabler\FooterMenu',
     'frontend\theme\GridView' => 'denis909\themes\tabler\GridView',
     'frontend\theme\Layout' => 'denis909\themes\tabler\Layout',
+    'frontend\theme\ListView' => 'denis909\themes\tabler\ListView',
     'frontend\theme\MainLayout' => 'denis909\themes\tabler\MainLayout',    
     'frontend\theme\MainMenu' => 'denis909\themes\tabler\MainMenu',
     'frontend\theme\ShoppingCart' => 'denis909\themes\tabler\ShoppingCart',
