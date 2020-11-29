@@ -1,5 +1,8 @@
 <?php
 
+require dirname(dirname(__DIR__)) . '/yii2-fake-bootstrap4/BootstrapAsset.php';
+require dirname(dirname(__DIR__)) . '/yii2-fake-bootstrap4/BootstrapPluginAsset.php';
+
 Yii::$container->setDefinitions([
     'frontend\theme\AccountMenu' => 'denis909\themes\tabler\AccountMenu',
     'frontend\theme\ActiveForm' => 'denis909\themes\tabler\ActiveForm',

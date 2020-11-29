@@ -3,6 +3,7 @@
     "license": "MIT",
     "require": {
         "denis909/yii2-frontend-theme": "*",
-        "denis909/yii2-theme-tabler": "*"
+        "denis909/yii2-theme-tabler": "*",
+        "denis909/yii2-fake-bootstrap4": "*"
     }
 }
